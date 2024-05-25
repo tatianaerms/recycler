@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recycling Categories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<style>
+    body {
+        background-color: #fff;
+    }
+
+    .plain-text {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .report-link {
+        font-size: 12px;
+        display: block;
+        text-align: center;
+    }
+
+    .bottom-navbar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .small-images {
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .small-images img {
+        width: 60px;
+        height: auto;
+    }
+
+    .button-page {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .map-iframe {
+        width: 100%;
+        height: 500px;
+        border: 0;
+    }
+</style>
+
+<body class="bg-white font-sans leading-normal tracking-normal">
+    <div class="max-w-sm mx-auto bg-white overflow-hidden">
+        <div class="p-5">
+            <h1 class="text-lg font-semibold text-gray-800">Переработка металлов</h1>
+            <p class="plain-text text-gray-800 mt-2">Металлы, такие как железо и алюминий, являются ценными вторичными ресурсами, которые могут быть эффективно переработаны и повторно использованы. Переработка металла помогает экономить природные ресурсы, снижать выбросы парниковых газов и уменьшать объемы отходов, отправляемых на свалку.</p>
+        </div>
+
+        <!-- Блок с тем, как определить тип вторсырья -->
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Как определить вид металла для переработки?</h2>
+            <p class="plain-text text-gray-800 mt-2">На упаковке металлических изделий, таких как банки и контейнеры, часто можно найти условные обозначения, которые указывают на тип металла и его возможность для переработки. Для железа и алюминия эти обозначения обычно представлены следующим образом:</p>
+            <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                <li><strong>Железо (Fe):</strong> Железные упаковки обычно имеют маркировку "Fe". Например, крышки от банок/бутылок, аэрозольные баллончики, баночки от влажного корма для животных</li>
+                <li><strong>Алюминий (Al):</strong> Упаковка из алюминия обычно имеет маркировку "Al". Этот металл используется для производства консервных банок, банок для напитков и других изделий.</li>
+            </ul>
+            <div class="small-images">
+                <img src="https://storage.yandexcloud.net/recycling-web-app/fe.png" alt="Пример fe">
+                <img src="https://storage.yandexcloud.net/recycling-web-app/alu.png" alt="Пример alu">
+            </div>
+        </div>
+
+        <!-- Блок с тем, как подготовить данный вид вторсырья -->
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Как подготовить металлы к переработке?</h2>
+            <p class="plain-text text-gray-800 mt-2">Подготовка металлической упаковки перед сдачей на переработку включает в себя следующие шаги:</p>
+            <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                <li><strong>Очистка:</strong> Промойте упаковку от остатков пищи или других материалов</li>
+                <li><strong>Сортировка:</strong> Обязательно уточните, принимает ли ваш пункт переработки аэрозольные баллоны из металла перед тем, как сдавать их</li>
+                <li><strong>Удаление нежелательных элементов:</strong> Если на упаковке есть элементы из других материалов, такие как пластиковые крышки или этикетки, их следует удалить</li>
+            </ul>
+        </div>
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Куда сдавать металлы?</h2>
+            <iframe class="map-iframe" src="https://recyclemap.ru/viewer?center=30.350667,59.959048,11.53&fractions=4"></iframe>
+        </div>
+        <!-- Блок с интересными фактами -->
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Интересные факты о переработке железа и алюминия</h2>
+            <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                <li><strong>Железо:</strong> Переработка железа позволяет сократить энергозатраты до 75% по сравнению с производством из руды. Также каждая тонна переработанного железа экономит около 1,5 тонн сырья</li>
+                <li><strong>Алюминий:</strong> Переработка алюминия требует всего 5% от энергии, необходимой для производства нового металла. При этом каждая тонна переработанного алюминия экономит около 9 тонн бокситовой руды</li>
+                <li><strong>Снижение выбросов CO2:</strong> Переработка одной тонны алюминия позволяет сэкономить около 315 кг углекислого газа, который бы образовался при производстве нового алюминия</li>
+                <li><strong>Экономия ресурсов:</strong> На каждую тонну переработанного металла экономится значительное количество природных ресурсов, что помогает сохранить природу и снизить затраты на добычу и транспортировку сырья</li>
+            </ul>
+        </div>
+
+        <div class="button-page mt-2 mb-20 bg-gray-100 shadow rounded-lg shadow">
+            <a href="https://storage.yandexcloud.net/recycling-web-app/materials_all.html" class="report-link font-semibold text-gray-800">Перейти к другим обучающим материалам</a>
+        </div>
+
+        <div class="bottom-navbar fixed inset-x-0 bottom-0 bg-white shadow">
+            <div class="flex justify-around p-4">
+                <a href="https://storage.yandexcloud.net/recycling-web-app/materials_all.html" class="text-gray-400"><i class="fas fa-home fa-lg"></i></a>
+                <a href="https://storage.yandexcloud.net/recycling-web-app/output_records.html" class="text-gray-400"><i class="fas fa-chart-bar fa-lg"></i></a>
+                <a href="profile.html" class="text-gray-400"><i class="fas fa-user fa-lg"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

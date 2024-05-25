@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recycling Categories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<style>
+    body {
+        background-color: #fff;
+    }
+
+    .plain-text {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .report-link {
+        font-size: 12px;
+        display: block;
+        text-align: center;
+    }
+
+    .bottom-navbar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .small-images {
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .small-images img {
+        width: 60px;
+        height: auto;
+    }
+
+    .button-page {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .map-iframe {
+        width: 100%;
+        height: 500px;
+        border: 0;
+    }
+</style>
+
+<body class="bg-white font-sans leading-normal tracking-normal">
+    <div class="max-w-sm mx-auto bg-white overflow-hidden">
+        <div class="p-5">
+            <h1 class="text-lg font-semibold text-gray-800">Переработка стекла</h1>
+            <p class="plain-text text-gray-800 mt-2">Стекло – это один из самых легко перерабатываемых материалов. Оно может быть переработано бесконечно, не теряя своих свойств и качества.</p>
+        </div>
+
+        <!-- Блок с тем, как определить тип вторсырья -->
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Как определить вид стекла по условным обозначениям на упаковке?</h2>
+            <p class="plain-text text-gray-800 mt-2">На упаковке стеклянных изделий обычно можно найти символ переработки, который указывает на возможность вторичной переработки материала. Стеклянные бутылки и банки часто имеют маркировку в виде треугольника из стрелок с цифрой и буквами в центре. Основные виды стекла, которые можно перерабатывать, включают:</p>
+            <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                <li><strong>Бесцветное стекло (GL70):</strong> Часто используется для бутылок и банок</li>
+                <li><strong>Зеленое стекло (GL71):</strong> Часто используется для винных бутылок</li>
+                <li><strong>Коричневое стекло (GL72):</strong> Часто используется для пивных бутылок</li>
+                <li><strong>Что НЕ стоит сдавать без уточнений:</strong> Керамическая и стеклянная посуда, крышки от сковородок и кастрюль, оптическое стекло (очки, линзы), автомобильное стекло, хрусталь, зеркала (лампочки также не сдаются как стекло)
+                 <div class="small-images">
+                        <img src="https://storage.yandexcloud.net/recycling-web-app/gl.png" alt="Пример pp">
+                    </div></li>
+            </ul>
+        </div>
+
+        <!-- Блок с тем, как подготовить данный вид вторсырья -->
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Как подготовить стекло к переработке?</h2>
+            <p class="plain-text text-gray-800 mt-2">Правильная подготовка стекла перед сдачей на переработку включает несколько простых шагов:</p>
+            <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                <li><strong>Очистка:</strong> Промойте стеклянные бутылки и банки, чтобы удалить остатки пищи или напитков. Это помогает предотвратить загрязнение других материалов и облегчает процесс переработки</li>
+                <li><strong>Удаление крышек и пробок:</strong> Снимите металлические крышки и пластиковые пробки. Они не перерабатываются вместе со стеклом и могут помешать процессу переработки</li>
+                <li><strong>Безопасность:</strong> Если стекло разбилось, аккуратно упакуйте осколки в газету или пакет, чтобы не поранить себя и работников пункта приема</li>
+            </ul>
+        </div>
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Куда сдавать стекло?</h2>
+            <iframe class="map-iframe" src="https://recyclemap.ru/viewer?center=30.363032,59.943879,12.25&fractions=3"></iframe>
+        </div>
+        <!-- Блок с интересными фактами -->
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Интересные факты о переработке стекла</h2>
+            <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                <li><strong>Бесконечная переработка:</strong> Стекло можно перерабатывать бесконечное количество раз без потери качества. Это делает его уникальным материалом среди других видов вторсырья. Переработка на 40% дешевле, чем производство нового стекла.</li>
+                <li><strong>Снижение выбросов CO2:</strong> Переработка одной тонны стекла позволяет сэкономить около 315 кг углекислого газа, который бы образовался при производстве нового стекла из песка, соды и известняка.</li>
+                <li><strong>Экономия ресурсов:</strong> На каждую тонну переработанного стекла экономится около 1,2 тонн сырьевых материалов. Это помогает сохранить природные ресурсы и снизить затраты на добычу и транспортировку сырья.</li>
+                <li><strong>Новые продукты:</strong> Переработанное стекло используется для производства новых бутылок и банок, изоляционных материалов, дорожного покрытия и даже декоративных изделий. Это позволяет создавать качественные продукты с меньшими затратами и меньшим воздействием на окружающую среду.</li>
+            </ul>
+        </div>
+
+        <div class="button-page mt-2 mb-20 bg-gray-100 shadow rounded-lg shadow">
+            <a href="https://storage.yandexcloud.net/recycling-web-app/materials_all.html" class="report-link font-semibold text-gray-800">Перейти к другим обучающим материалам</a>
+        </div>
+
+        <div class="bottom-navbar fixed inset-x-0 bottom-0 bg-white shadow">
+            <div class="flex justify-around p-4">
+                <a href="https://storage.yandexcloud.net/recycling-web-app/materials_all.html" class="text-gray-400"><i class="fas fa-home fa-lg"></i></a>
+                <a href="https://storage.yandexcloud.net/recycling-web-app/output_records.html" class="text-gray-400"><i class="fas fa-chart-bar fa-lg"></i></a>
+                <a href="profile.html" class="text-gray-400"><i class="fas fa-user fa-lg"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

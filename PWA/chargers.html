@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recycling Categories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<style>
+    body {
+        background-color: #fff;
+    }
+
+    .plain-text {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .report-link {
+        font-size: 12px;
+        display: block;
+        text-align: center;
+    }
+
+    .bottom-navbar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .small-images {
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .small-images img {
+        width: 60px;
+        height: auto;
+    }
+
+    .button-page {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .map-iframe {
+        width: 100%;
+        height: 500px;
+        border: 0;
+    }
+</style>
+
+<body class="bg-white font-sans leading-normal tracking-normal">
+    <div class="max-w-sm mx-auto bg-white overflow-hidden">
+        <div class="p-5">
+            <h1 class="text-lg font-semibold text-gray-800">Переработка батареек</h1>
+            <p class="plain-text text-gray-800 mt-2">Переработка батареек – важный шаг в защите окружающей среды и здоровья человека. Батарейки содержат множество опасных химических веществ, которые при неправильной утилизации могут серьезно навредить экосистеме</p>
+        </div>
+
+        <!-- Блок с тем, как определить тип вторсырья -->
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Особенности переработки батареек и аккумуляторов</h2>
+           <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                <li><strong>Батарейки:</strong> Алкалиновые и марганцево-цинковые батарейки содержат такие металлы, как цинк и марганец, которые можно переработать и использовать повторно. Переработка этих батареек включает их измельчение и химическую обработку для извлечения полезных материалов</li>
+                <li><strong>Перезаряжаемые аккумуляторы:</strong> Аккумуляторы (никель-кадмиевые, никель-металлгидридные, литий-ионные) содержат ценные металлы, такие как никель, кадмий и литий. Процесс переработки таких аккумуляторов сложнее и включает в себя предварительное разрядку, разборку, химическую обработку и переработку металлов. Крайне важно сдавать такие аккумуляторы в специализированные пункты приема, так как они содержат более опасные вещества, чем обычные батарейки</li>
+            </ul>
+        </div>
+
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Куда сдавать батарейки?</h2>
+            <iframe class="map-iframe" src="https://recyclemap.ru/viewer?center=30.339681,59.939205,11.49&fractions=10"></iframe>
+        </div>
+        <!-- Блок с интересными фактами -->
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Интересные факты о переработке батареек</h2>
+            <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                <li><strong>Экономия ресурсов:</strong> Переработка одной тонны использованных батареек позволяет сэкономить около 250 кг цинка и 100 кг марганца, которые можно использовать для производства новых батареек и других продуктов</li>
+                <li><strong>Высокий процент переработки:</strong> Современные технологии позволяют перерабатывать до 90% материалов, содержащихся в батарейках и аккумуляторах, что значительно снижает необходимость добычи новых ресурсов</li>
+                <li><strong>Уменьшение загрязнения:</strong> Одна выброшенная батарейка может загрязнить около 20 квадратных метров земли тяжелыми металлами. Правильная переработка предотвращает это и защищает окружающую среду</li>
+            </ul>
+        </div>
+
+        <div class="button-page mt-2 mb-20 bg-gray-100 shadow rounded-lg shadow">
+            <a href="https://storage.yandexcloud.net/recycling-web-app/materials_all.html" class="report-link font-semibold text-gray-800">Перейти к другим обучающим материалам</a>
+        </div>
+
+        <div class="bottom-navbar fixed inset-x-0 bottom-0 bg-white shadow">
+            <div class="flex justify-around p-4">
+                <a href="https://storage.yandexcloud.net/recycling-web-app/materials_all.html" class="text-gray-400"><i class="fas fa-home fa-lg"></i></a>
+                <a href="https://storage.yandexcloud.net/recycling-web-app/output_records.html" class="text-gray-400"><i class="fas fa-chart-bar fa-lg"></i></a>
+                <a href="profile.html" class="text-gray-400"><i class="fas fa-user fa-lg"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

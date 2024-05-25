@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recycling Categories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<style>
+    body {
+        background-color: #fff;
+    }
+
+
+    .plain-text {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .report-link {
+        font-size: 12px;
+        display: block;
+        text-align: center;
+    }
+
+    .bottom-navbar {
+      position: fixed; /* Зафиксировать таббар внизу экрана */
+      bottom: 0; /* Разместить таббар внизу */
+      width: 100%; /* Растянуть таббар по всей ширине экрана */
+      background-color: #fff; /* Цвет фона таббара */
+      box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.5); /* Добавляем тень под таббаром */
+    }
+
+    .small-images {
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .small-images img {
+        width: 80px;
+        height: auto;
+    }
+    .button-page {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .map-iframe {
+        width: 100%;
+        height: 500px;
+        border: 0;
+    }
+</style>
+
+<body class="bg-white font-sans leading-normal tracking-normal">
+    <div class="max-w-sm mx-auto bg-white overflow-hidden">
+        <div class="p-5">
+            <h1 class="text-lg font-semibold text-gray-800">Картон и бумага</h1>
+            <p class="plain-text text-gray-800 mt-2">Картон и бумага – это материалы, которые широко используются в повседневной жизни. Они легко поддаются переработке и могут быть повторно использованы для изготовления новых продуктов, таких как газеты, упаковка и туалетная бумага. Переработка картона и бумаги помогает уменьшить количество отходов на свалках и сократить вырубку деревьев, что важно для сохранения нашей планеты.</p>
+        </div>
+
+        <!-- Блок с тем, как определить тип вторсырья -->
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Как определить тип  по условным обозначениям на упаковке</h2>
+            <p class="plain-text text-gray-800 mt-2">Чтобы определить, какой вид вторсырья перед вами, обратите внимание на специальные обозначения на упаковке. Вот несколько основных советов:</p>
+            <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                <li><strong>Картон:</strong> Обычно многослойный материал, который используется для изготовления коробок, упаковки и контейнеров. На упаковке можно найти символы с изображением стрелок, образующих треугольник, внутри которого указаны буквы "PAP" (от англ. paper - бумага). Также иногда может быть указан номер 20 или 21.
+                    <div class="small-images">
+                        <img src="https://storage.yandexcloud.net/recycling-web-app/pap20.jpeg" alt="Пример картонного отхода">
+                        <img src="https://storage.yandexcloud.net/recycling-web-app/pap21.jpeg" alt="Пример картонного отхода">
+                    </div>
+                </li>
+                <li><strong>Бумага:</strong> Однослойный материал, используемый для печати, письма и производства упаковочной бумаги. На бумажных изделиях часто можно увидеть обозначение с буквой "PAP" и цифрой 22.
+                     <div class="small-images">
+                        <img src="https://storage.yandexcloud.net/recycling-web-app/pap22.jpeg" alt="Пример бумажного отхода">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Блок с тем, как подготовить данный вид вторсырья -->
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Как подготовить данный вид вторсырья?</h2>
+            <p class="plain-text text-gray-800 mt-2">Перед тем как сдать картон и бумагу в переработку, важно правильно подготовить их, чтобы облегчить процесс переработки:</p>
+            <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                <li><strong>Картон:</strong>
+                    <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                        <li>Разберите коробки: Снимите всю упаковочную ленту, скобы и другие несъёмные части</li>
+                        <li>Сложите и уплотните: Разверните коробки, чтобы они занимали меньше места, и сложите их плотно</li>
+                    </ul>
+                </li>
+                <li><strong>Бумага:</strong>
+                    <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                        <li>Удалите скрепки и скотч: Перед сдачей в переработку удалите все металлические скрепки, скотч и пластиковые обложки</li>
+                        <li>Сортируйте: Разделите бумагу по типам – газеты, журналы, офисная бумага, чтобы облегчить процесс сортировки на перерабатывающем предприятии</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Куда сдавать картон и бумагу?</h2>
+            <iframe class="map-iframe" src="https://recyclemap.ru/viewer?center=30.368952,59.939680,11.94&fractions=1"></iframe>
+        </div>
+        <!-- Блок с интересными фактами -->
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Интересные факты о переработке картона и бумаги</h2>
+            <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                <li><strong>Сокращение выбросов углекислого газа:</strong> Переработка одной тонны бумаги позволяет сократить выбросы углекислого газа на 1,3 тонны по сравнению с производством новой бумаги из первичного сырья.</li>
+                <li><strong>Сохранение деревьев:</strong> Переработка бумаги и картона помогает сохранить леса. Одна тонна переработанной бумаги спасает около 17 деревьев.</li>
+                <li><strong>Экономия воды и энергии:</strong> Производство переработанной бумаги требует на 70% меньше энергии и на 50% меньше воды по сравнению с производством бумаги из древесины.</li>
+                <li><strong>Быстрое разложение:</strong> Картон и бумага являются биоразлагаемыми материалами. Однако при захоронении на свалках они разлагаются медленно из-за недостатка кислорода. Переработка ускоряет этот процесс, возвращая материалы в цикл использования быстрее.</li>
+                <li><strong>Повторное использование:</strong> Волокна бумаги могут быть переработаны до семи раз, прежде чем они станут слишком короткими для дальнейшего использования.</li>
+            </ul>
+            <p class="plain-text text-gray-800 mt-2">Начав сортировать и сдавать картон и бумагу в переработку, вы делаете важный шаг к защите окружающей среды и устойчивому будущему. Помните, что каждая мелочь имеет значение, и даже небольшие усилия могут привести к значительным изменениям.</p>
+        </div>
+        <div class="button-page mt-2 mb-20 bg-gray-100 shadow rounded-lg shadow">
+        <a href="https://storage.yandexcloud.net/recycling-web-app/materials_all.html" class="report-link font-semibold text-gray-800">Перейти к другим обучающим материалам</a>
+        </div>
+          <div class="bottom-navbar fixed inset-x-0 bottom-0 bg-white shadow">
+    <div class="flex justify-around p-4">
+        <a href="https://storage.yandexcloud.net/recycling-web-app/materials_all.html" class="text-gray-400"><i class="fas fa-home fa-lg"></i></a>
+        <a href="https://storage.yandexcloud.net/recycling-web-app/output_records.html" class="text-gray-400"><i class="fas fa-chart-bar fa-lg"></i></a>
+        <a href="profile.html" class="text-gray-400"><i class="fas fa-user fa-lg"></i></a>
+    </div>
+</div>
+
+
+
+
+    </div>
+</body>
+
+</html>

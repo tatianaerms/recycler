@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Recycling Categories</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="manifest" href="manifest.json"> <!-- For PWA -->
+  <!-- ios support -->
+  <link rel="apple-touch-icon" href="images/icons/icon-72x72.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-96x96.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-128x128.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-144x144.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-384x384.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-512x512.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#db4938">
+  <meta name="theme-color" content="#db4938">
+  <script src="js/app.js"></script>
+   
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+
+  <style>
+    body {
+      background-color: #fff; /* Устанавливаем белый фон */
+    }
+    .card-container {
+      background-color: #f3f4f6; /* Устанавливаем светло-серый фон карточек */
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень карточкам */
+      cursor: pointer; /* Делаем курсор указателем при наведении на карточку */
+    }
+
+    .card-text {
+      font-size: 7px;
+      font-weight: bold;
+      text-align: center;
+      position: absolute; /* Абсолютное позиционирование для текста */
+      bottom: 0; /* Помещаем текст внизу контейнера */
+      left: 0; /* Выравниваем текст по левому краю */
+      right: 0; /* Выравниваем текст по правому краю */
+      padding: 10px; /* Добавляем отступы для текста */
+      background-color: #fff; /* Задаем прозрачный фон для текста */
+      border-bottom-left-radius: inherit; /* Наследуем радиус закругления от родительского контейнера */
+      border-bottom-right-radius: inherit; /* Наследуем радиус закругления от родительского контейнера */
+    }
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+   .card-container img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    }
+    .search-bar {
+      height: 30px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень под таббаром */
+    }
+    .search-bar input {
+      font-size: 10px;
+    }
+    .search-bar i {
+      margin-left: 7px; /* Добавляем отступ справа для иконки лупы */
+    }
+    .grid {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Изменяем ширину карточек и количество карточек в ряду */
+      gap: 5px; /* Уменьшаем пространство между карточками */
+      margin-bottom: 50px; 
+    }
+  .bottom-navbar {
+      position: fixed; /* Зафиксировать таббар внизу экрана */
+      bottom: 0; /* Разместить таббар внизу */
+      width: 100%; /* Растянуть таббар по всей ширине экрана */
+      background-color: #fff; /* Цвет фона таббара */
+      box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.5); /* Добавляем тень под таббаром */
+    }
+.card-container {
+    position: relative; /* Относительное позиционирование для контейнера */
+}
+
+  </style>
+</head>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchBar = document.querySelector('input[type="text"]');
+    const cards = document.querySelectorAll('.card-container');
+
+    searchBar.addEventListener('input', function() {
+      const searchValue = searchBar.value.trim().toLowerCase();
+      
+      cards.forEach(function(card) {
+        const cardText = card.querySelector('.card-text').textContent.toLowerCase();
+        
+        if (cardText.includes(searchValue)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+ 
+<body class="bg-white">
+  <div class="max-w-xs mx-auto">
+   <!-- Search Bar -->
+   <div class="p-2">
+    <div class="flex items-center bg-gray-100 rounded-full shadow search-bar">
+     <i class="fas fa-search p-2 text-gray-400"></i>
+     <input class="rounded-full py-1 px-2 w-full bg-gray-100 focus:outline-none" placeholder="Поиск по типу для перехода в нужный раздел" type="text"/>
+    </div>
+   </div>
+
+   <!-- Categories Grid -->
+  <div class="grid gap-4 p-4">
+            <a href="https://storage.yandexcloud.net/recycling-web-app/paper1.html" class="card-container bg-gray-100 rounded-lg p-2">
+                 <img alt="Placeholder image for Картон и бумага" src="https://storage.yandexcloud.net/recycling-web-app/cardboard.png">
+                <span class="card-text">
+                Картон и бумага
+              </span>
+            </a>
+    <!-- Remaining Cards with same image -->
+    <a href="https://storage.yandexcloud.net/recycling-web-app/plastic_bottles.html" class="card-container bg-gray-100 rounded-lg p-2">
+     <img alt="Placeholder image for Бутылки" src="https://storage.yandexcloud.net/recycling-web-app/bottles_2.png"/>
+     <span class="card-text">
+      Бутылки
+     </span>
+    </a>
+    <a href="https://storage.yandexcloud.net/recycling-web-app/plastic_hard.html" class="card-container bg-gray-100 rounded-lg p-2">
+     <img alt="Placeholder image for Небулычный пластик (твердый)" src="https://storage.yandexcloud.net/recycling-web-app/plastic_png.png"/>
+     <span class="card-text">
+      Небутылочный пластик
+     </span>
+    </a>
+    <a href="https://storage.yandexcloud.net/recycling-web-app/plastic_light.html" class="card-container bg-gray-100 rounded-lg p-2">
+     <img alt="Placeholder image for Мягкий пластик (пакеты и упаковка)" src="https://storage.yandexcloud.net/recycling-web-app/package_png.png"/>
+     <span class="card-text">
+      Мягкий пластик (упаковка)
+     </span>
+    </a>
+   <a href="https://storage.yandexcloud.net/recycling-web-app/glass.html" class="card-container bg-gray-100 rounded-lg p-2">
+     <img alt="Placeholder image for Стекло" src="https://storage.yandexcloud.net/recycling-web-app/glass_png.png"/>
+     <span class="card-text">
+      Стекло
+     </span>
+    </a>   
+    <a href="https://storage.yandexcloud.net/recycling-web-app/doypak.html" class="card-container bg-gray-100 rounded-lg p-2">
+     <img alt="Placeholder image for Дой-паки или пач" src="https://storage.yandexcloud.net/recycling-web-app/pouch_png.png"/>
+     <span class="card-text">
+      Дой-паки или пауч
+     </span>
+    </a>  
+    <a href="https://storage.yandexcloud.net/recycling-web-app/metal.html" class="card-container bg-gray-100 rounded-lg p-2">
+     <img alt="Placeholder image for Металл" src="https://storage.yandexcloud.net/recycling-web-app/metal_png.png"/>
+     <span class="card-text">
+      Металл
+     </span>
+    </a>     
+    <a href="https://storage.yandexcloud.net/recycling-web-app/tetrapak.html" class="card-container bg-gray-100 rounded-lg p-2">
+     <img alt="Placeholder image for Тетра-пак" src="https://storage.yandexcloud.net/recycling-web-app/tetrapak.png"/>
+     <span class="card-text">
+      Тетра-пак
+     </span>
+    </a>       
+    <a href="https://storage.yandexcloud.net/recycling-web-app/ewaste.html" class="card-container bg-gray-100 rounded-lg p-2">
+     <img alt="Placeholder image for Техника" src="https://storage.yandexcloud.net/recycling-web-app/ewaste.png"/>
+     <span class="card-text">
+      Техника
+     </span>
+    </a>   
+    <a href="https://storage.yandexcloud.net/recycling-web-app/lamps.html" class="card-container bg-gray-100 rounded-lg p-2">
+     <img alt="Placeholder image for Лампочки" src="https://storage.yandexcloud.net/recycling-web-app/lamps_png.png"/>
+     <span class="card-text">
+      Лампочки 
+     </span>
+    </a>         
+    <a href="https://storage.yandexcloud.net/recycling-web-app/clothes.html" class="card-container bg-gray-100 rounded-lg p-2">
+     <img alt="Placeholder image for Одежда" src="https://storage.yandexcloud.net/recycling-web-app/clothes_png.png"/>
+     <span class="card-text">
+      Одежда
+     </span>
+    </a>     
+     <a href="https://storage.yandexcloud.net/recycling-web-app/chargers.html" class="card-container bg-gray-100 rounded-lg p-2">
+     <img alt="Placeholder image for Батарейки" src="https://storage.yandexcloud.net/recycling-web-app/chargers_png.png"/>
+     <span class="card-text">
+      Батарейки
+     </span>
+    </a>     
+   <!-- Bottom Navigation -->
+ <div class="bottom-navbar fixed inset-x-0 bottom-0 bg-white shadow">
+    <div class="flex justify-around p-4">
+        <a href="https://storage.yandexcloud.net/recycling-web-app/materials_all.html" class="text-gray-400"><i class="fas fa-home fa-lg"></i></a>
+        <a href="https://storage.yandexcloud.net/recycling-web-app/output_records.html" class="text-gray-400"><i class="fas fa-chart-bar fa-lg"></i></a>
+        <a href="https://storage.yandexcloud.net/recycling-web-app/output_records.html" class="text-gray-400"><i class="fas fa-user fa-lg"></i></a>
+    </div>
+</div>
+  </div>
+ </body>
+</html>

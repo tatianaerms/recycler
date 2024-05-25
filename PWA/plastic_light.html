@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recycling Categories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<style>
+    body {
+        background-color: #fff;
+    }
+
+
+    .plain-text {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .report-link {
+        font-size: 12px;
+        display: block;
+        text-align: center;
+    }
+
+    .bottom-navbar {
+      position: fixed; /* Зафиксировать таббар внизу экрана */
+      bottom: 0; /* Разместить таббар внизу */
+      width: 100%; /* Растянуть таббар по всей ширине экрана */
+      background-color: #fff; /* Цвет фона таббара */
+      box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.5); /* Добавляем тень под таббаром */
+    }
+
+    .small-images {
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .small-images img {
+        width: 60px;
+        height: auto;
+    }
+    .button-page {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .map-iframe {
+        width: 100%;
+        height: 500px;
+        border: 0;
+    }
+</style>
+
+<body class="bg-white font-sans leading-normal tracking-normal">
+    <div class="max-w-sm mx-auto bg-white overflow-hidden">
+        <div class="p-5">
+            <h1 class="text-lg font-semibold text-gray-800">Мягкий пластик для упаковки</h1>
+            <p class="plain-text text-gray-800 mt-2">Мягкий пластик используется для различных видов упаковки, таких как пакеты, обертки, пленки и мешки. Он легкий, гибкий и легко поддается формовке, что делает его популярным материалом для упаковки продуктов, бытовых товаров и других изделий. Основные виды мягкого пластика включают полиэтилен (HDPE и LDPE) и полипропилен (PP), которые отличаются своими физическими свойствами и областью применения</p>
+        </div>
+
+        <!-- Блок с тем, как определить тип вторсырья -->
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Как определить вид пластика по условным обозначениям на упаковке?</h2>
+            <p class="plain-text text-gray-800 mt-2">Чтобы определить, какой вид мягкого пластика у вас в руках, обратите внимание на условные обозначения на упаковке. Обычно они располагаются на дне или на задней части упаковки и представляют собой символы в виде стрелок, образующих треугольник, внутри которого указан номер и аббревиатура</p>
+            <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                <li><strong>HDPE (полиэтилен высокой плотности, номер 2, ПНД):</strong> Этот тип пластика часто используется для изготовления тонких шуршащих фасовочных пакетиков и пакетов-«маек». Маркировка на таких изделиях будет 02, HDPE или ПНД
+                    <div class="small-images">
+                        <img src="https://storage.yandexcloud.net/recycling-web-app/hdpe.png" alt="Пример значка">
+                    </div>
+                </li>
+                <li><strong>LDPE (полиэтилен низкой плотности, номер 4, ПВД):</strong> Применяется для производства мягких, маслянистых на ощупь пакетиков, парниковой пленки, стрейча и воздушно-пузырьковой пленки. Маркировка – 04, LDPE или ПВД
+                     <div class="small-images">
+                        <img src="https://storage.yandexcloud.net/recycling-web-app/ldpe.png" alt="Пример pet">
+                    </div>
+                </li>
+                <li><strong>PP (полипропилен, номер 5, ПП):</strong> Чаще всего это блестящая и хрустящая упаковка, которая легко рвется и не тянется. В полипропилен фасуют крупы, макароны, хлеб, печенье, чай, коробки конфет и т.п. Непрозрачные обертки от шоколадных батончиков также могут быть из PP, но их переработка сложнее из-за добавок красителей
+                     <div class="small-images">
+                        <img src="https://storage.yandexcloud.net/recycling-web-app/pp5.png" alt="Пример pp">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Блок с тем, как подготовить данный вид вторсырья -->
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Как подготовить мягкий пластик к переработке?</h2>
+            <p class="plain-text text-gray-800 mt-2">Вот несколько шагов, которые следует соблюдать:</p>
+            <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                <li><strong>Тщательно промойте упаковку:</strong> Промойте упаковку от остатков пищи и других загрязнений. Это важно для предотвращения загрязнения перерабатываемого материала</li>
+                <li><strong>Удалите наклейки и этикетки:</strong> Если это возможно, удалите все бумажные наклейки и этикетки с пластика</li>
+                <li><strong>Сушите пластик:</strong> Перед тем как сдавать пластик на переработку, убедитесь, что он полностью сухой</li>
+                 <li><strong>Сортируйте по типам пластика:</strong> Разделите пластик по типам, обозначенным на упаковке, чтобы облегчить процесс сортировки в экоцентре или месте сбора вторсырья</li>  
+            </ul>
+        </div>
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Куда сдавать пластик</h2>
+            <iframe class="map-iframe" src="https://recyclemap.ru/viewer?center=30.351334,59.939985,11.96&fractions=2"></iframe>
+        </div>
+        <!-- Блок с интересными фактами -->
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Интересные факты о переработке пластика</h2>
+            <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                <li><strong>Снижение загрязнения океанов:</strong> Около 8 миллионов тонн пластика попадает в океаны каждый год. Переработка мягкого пластика может существенно снизить этот объем, помогая защитить морские экосистемы и животных</li>
+                <li><strong>Разнообразие продукции после переработки:</strong> Переработанный мягкий пластик часто используется для создания новых упаковочных материалов, мусорных пакетов, строительных пленок, а также таких изделий, как пластиковые доски, садовая мебель и даже дорожное покрытие</li>
+            </ul>
+            <p class="plain-text text-gray-800 mt-2">Помните, что каждая мелочь имеет значение, и даже небольшие усилия могут привести к изменениям</p>
+        </div>
+        <div class="button-page mt-2 mb-20 bg-gray-100 shadow rounded-lg shadow">
+        <a href="https://storage.yandexcloud.net/recycling-web-app/materials_all.html" class="report-link font-semibold text-gray-800">Перейти к другим обучающим материалам</a>
+        </div>
+          <div class="bottom-navbar fixed inset-x-0 bottom-0 bg-white shadow">
+    <div class="flex justify-around p-4">
+        <a href="https://storage.yandexcloud.net/recycling-web-app/materials_all.html" class="text-gray-400"><i class="fas fa-home fa-lg"></i></a>
+        <a href="https://storage.yandexcloud.net/recycling-web-app/output_records.html" class="text-gray-400"><i class="fas fa-chart-bar fa-lg"></i></a>
+        <a href="profile.html" class="text-gray-400"><i class="fas fa-user fa-lg"></i></a>
+    </div>
+</div>
+
+
+
+
+    </div>
+</body>
+
+</html>

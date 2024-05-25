@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recycling Categories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<style>
+    body {
+        background-color: #fff;
+    }
+
+    .plain-text {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .report-link {
+        font-size: 12px;
+        display: block;
+        text-align: center;
+    }
+
+    .bottom-navbar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .small-images {
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .small-images img {
+        width: 150px;
+        height: auto;
+    }
+
+    .button-page {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .map-iframe {
+        width: 100%;
+        height: 500px;
+        border: 0;
+    }
+</style>
+
+<body class="bg-white font-sans leading-normal tracking-normal">
+    <div class="max-w-sm mx-auto bg-white overflow-hidden">
+        <div class="p-5">
+            <h1 class="text-lg font-semibold text-gray-800">Переработка дойпаков и паучей</h1>
+            <p class="plain-text text-gray-800 mt-2">Дойпаки и паучи – это виды гибкой упаковки, которые широко используются для упаковки различных пищевых продуктов и других неагрессивных субстанций. Такая упаковка может быть чисто полимерной, фольгированной или комбинированной, что значительно осложняет её переработку. Также внутри упаковки часто остаётся часть содержимого, что дополнительно усложняет процесс.</p>
+        </div>
+
+        <!-- Блок с тем, как определить тип вторсырья -->
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Как определить вид пластика по условным обозначениям на упаковке?</h2>
+            <p class="plain-text text-gray-800 mt-2">На упаковке дойпаков и паучей обычно можно найти условные обозначения, которые помогут определить тип материала и возможность его переработки. Эти обозначения представляют собой символы в виде стрелок, образующих треугольник, внутри которого указан номер и аббревиатура. Обычно они располагаются на задней стороне упаковки или на дне.</p>
+            <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                <li><strong>PP (полипропилен, номер 5):</strong> Чаще всего это блестящая и хрустящая упаковка, которая легко рвётся и не тянется.</li>
+                <li><strong>PET (полиэтилентерефталат, номер 1):</strong> Часто используется в чисто полимерных дойпаках и паучах.</li>
+                <li><strong>HDPE (полиэтилен высокой плотности, номер 2):</strong> Может встречаться в многослойной упаковке.</li>
+                <li><strong>LDPE (полиэтилен низкой плотности, номер 4):</strong> Иногда используется для внутреннего слоя комбинированной упаковки.
+                <div class="small-images">
+                        <img src="https://storage.yandexcloud.net/recycling-web-app/doypak5.png" alt="Пример doypak5">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Блок с тем, как подготовить данный вид вторсырья -->
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Как подготовить дойпаки и паучи к переработке?</h2>
+            <p class="plain-text text-gray-800 mt-2">Правильная подготовка дойпаков и паучей перед сдачей на переработку включает несколько шагов:</p>
+            <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                <li><strong>Очистка:</strong> Промойте упаковку от остатков пищи или других субстанций. Это важно для предотвращения загрязнения перерабатываемого материала. Также, стоит удалить крышечки</li>
+                <li><strong>Сушите упаковку:</strong> Перед тем как сдавать упаковку на переработку, убедитесь, что она полностью сухая</li>
+            </ul>
+        </div>
+        
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Куда сдавать упаковку?</h2>
+            <p class="plain-text text-gray-800 mt-2">Перерабатывают данное вторсырье далеко не повсеместно - лучший выбор это найти ближайший к вам экоцентр и уточнить о возможности переработки. Например, в Собиратор в СПб или Москве</p>
+        </div>
+
+        <!-- Блок с интересными фактами -->
+        <div class="p-5">
+            <h2 class="font-semibold text-gray-800">Интересные факты о переработке дойпаков и паучей</h2>
+            <ul class="plain-text text-gray-800 mt-2 list-disc list-inside">
+                <li><strong>Сложность переработки:</strong> Дойпаки и паучи изготавливаются из многослойных материалов, что затрудняет их переработку. В отличие от односоставной упаковки, многослойная требует сложных процессов разделения материалов.</li>
+                <li><strong>Популярность и производство:</strong> Ежегодное производство дойпаков оценивается в 40 миллиардов штук, что свидетельствует о высокой популярности и удобстве этой упаковки.</li>
+                <li><strong>Экономия ресурсов:</strong> Переработка дойпаков и паучей позволяет экономить ресурсы и уменьшать количество отходов, попадающих на свалки.</li>
+                <li><strong>Экологичные альтернативы:</strong> Почти любая односоставная упаковка может быть сдана на переработку в отличие от дойпаков и паучей, какими бы удобными они ни были. Старайтесь выбирать продукты в другой упаковке, например, майонез в стекле или пластиковой ведёрке, сгущёнку в жестяной банке или пластиковой бутылке, детское пюре в стеклянной банке.</li>
+            </ul>
+        </div>
+
+        <div class="button-page mt-2 mb-20 bg-gray-100 shadow rounded-lg shadow">
+            <a href="https://storage.yandexcloud.net/recycling-web-app/materials_all.html" class="report-link font-semibold text-gray-800">Перейти к другим обучающим материалам</a>
+        </div>
+
+        <div class="bottom-navbar fixed inset-x-0 bottom-0 bg-white shadow">
+            <div class="flex justify-around p-4">
+                <a href="https://storage.yandexcloud.net/recycling-web-app/materials_all.html" class="text-gray-400"><i class="fas fa-home fa-lg"></i></a>
+                <a href="https://storage.yandexcloud.net/recycling-web-app/output_records.html" class="text-gray-400"><i class="fas fa-chart-bar fa-lg"></i></a>
+                <a href="profile.html" class="text-gray-400"><i class="fas fa-user fa-lg"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

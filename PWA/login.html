@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+<style>
+    body {
+        background-color: #fff;
+        /* Устанавливаем белый фон */
+    }
+
+    .form-input {
+        font-size: 12px;
+        padding: 8px;
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-top: 8px;
+    }
+
+    .form-button {
+        font-size: 12px;
+        padding: 10px;
+        width: 100%;
+        background-color: #5B6161;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        margin-top: 16px;
+    }
+
+    .form-container {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+    }
+
+    .form-title {
+        font-size: 18px;
+        margin-bottom: 16px;
+        text-align: center;
+        color: #333;
+    }
+
+    .bottom-navbar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .bottom-navbar .fas {
+        font-size: 20px;
+    }
+</style>
+
+<body class="bg-white font-sans leading-normal tracking-normal">
+    <div class="max-w-sm mx-auto bg-white overflow-hidden">
+
+        <div class="p-5 form-container mt-6">
+            <h2 class="form-title">Авторизация</h2>
+            <form id="loginForm">
+                <input type="text" id="loginUsername" class="form-input" placeholder="Имя пользователя" required>
+                <input type="password" id="loginPassword" class="form-input" placeholder="Пароль" required>
+                <button type="submit" class="form-button">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="bottom-navbar fixed inset-x-0 bottom-0 bg-white shadow">
+        <div class="flex justify-around p-4">
+            <a href="https://storage.yandexcloud.net/recycling-web-app/materials_all.html" class="text-gray-400"><i class="fas fa-home fa-lg"></i></a>
+            <a href="https://storage.yandexcloud.net/recycling-web-app/output_records.html" class="text-gray-400"><i class="fas fa-chart-bar fa-lg"></i></a>
+            <a href="profile.html" class="text-gray-400"><i class="fas fa-user fa-lg"></i></a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('registerUsername').value;
+            const password = document.getElementById('registerPassword').value;
+            const email = document.getElementById('registerEmail').value;
+
+            console.log(`Registered with Username: ${username}, Password: ${password}, Email: ${email}`);
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('loginUsername').value;
+            const password = document.getElementById('loginPassword').value;
+
+            console.log(`Logged in with Username: ${username}, Password: ${password}`);
+        });
+    </script>
+</body>
+
+</html>
+

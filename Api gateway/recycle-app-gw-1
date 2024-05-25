@@ -1,0 +1,74 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  version: 1.0.0
+servers:
+- url: https://d5d95tp02s6snvck945k.apigw.yandexcloud.net
+x-yc-apigateway:
+  cors:
+    origin: '*'
+    methods: '*'
+    allowedHeaders: '*'
+
+paths:
+  /:
+    get:
+      x-yc-apigateway-integration:
+        type: dummy
+        content:
+          '*': Hello, World!
+        http_code: 200
+        http_headers:
+          Content-Type: text/plain
+  /report/{user_id}/{start_time}/{end_time}:
+    get:
+      summary: "Fetch report data from DB"
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: string 
+      - name: start_time
+        in: path
+        required: true
+        schema:
+          type: string      
+      - name: end_time
+        in: path
+        required: true
+        schema:
+          type: string                       
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: d4ehs8s21r47flt1a06f
+        service_account_id: aje3dio9eev4u8i5geik
+
+  /recycleRecord:
+    post:          
+      summary: "Creates recycling record about recycled materials"
+      parameters:
+      - name: user_id
+        in: query
+        required: true
+        schema:
+          type: integer
+      - name: materials
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: comments
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: date
+        in: query
+        required: true
+        schema:
+          type: string          
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: d4ehs8s21r47flt1a06f
+        service_account_id: aje3dio9eev4u8i5geik

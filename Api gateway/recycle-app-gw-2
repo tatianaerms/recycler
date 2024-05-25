@@ -1,0 +1,69 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  version: 1.0.0
+servers:
+- url: https://d5dq6koofhof6dhc3eer.apigw.yandexcloud.net
+x-yc-apigateway:
+  cors:
+    origin: '*'
+    methods: '*'
+    allowedHeaders: '*'
+
+paths:
+  /:
+    get:
+      x-yc-apigateway-integration:
+        type: dummy
+        content:
+          '*': Hello, World!
+        http_code: 200
+        http_headers:
+          Content-Type: text/plain
+  /auth/login/{login}/{password_hash}:
+    get:
+      summary: "returns userId if has user"
+      parameters:
+      - name: login
+        in: path
+        required: true
+        schema:
+          type: string 
+      - name: password_hash
+        in: path
+        required: true
+        schema:
+          type: string           
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: d4e2i4aga42rkh99pic6
+        service_account_id: aje3dio9eev4u8i5geik
+
+  /auth/register:
+    post:          
+      summary: "Creates profile"
+      parameters:
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: integer
+      - name: surname
+        in: query
+        required: true
+        schema:
+          type: integer          
+      - name: email
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: password_hash
+        in: query
+        required: true
+        schema:
+          type: string       
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: d4e2i4aga42rkh99pic6
+        service_account_id: aje3dio9eev4u8i5geik
